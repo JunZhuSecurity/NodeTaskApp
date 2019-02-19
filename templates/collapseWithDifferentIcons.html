@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type = "text/javascript" src="../script/db_select.js"></script>
+<script type = "text/javascript" src="../script/execute_query.js"></script>
+
+
+<!--<script>-->
+    <!--function select_data() {-->
+        <!--var mysql = require('mysql');-->
+        <!--var con = mysql.createConnection({-->
+            <!--host: "localhost",-->
+            <!--user: "root",-->
+            <!--password: "iloveyou",-->
+            <!--database: "mydb"-->
+        <!--});-->
+
+        <!--con.connect(function (err) {-->
+            <!--if (err) throw err;-->
+            <!--//Select all customers and return the result object:-->
+            <!--con.query("SELECT * FROM customers", function (err, result, fields) {-->
+                <!--if (err) throw err;-->
+                <!--console.log(result);-->
+
+            <!--});-->
+
+        <!--});-->
+        <!--document.write("<li>" + "trye" + "<br />");-->
+    <!--}-->
+<!--</script>-->
+<script>
+    var results = getCustomers();
+    function showQueryResults() {
+        document.getElementById("demo").innerHTML = "another test";
+    }
+</script>
+<div class="container">
+    <h2>Expand and Collapse with different icons</h2>
+    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo">
+        <span class="glyphicon glyphicon-collapse-down"></span> Open
+    </button>
+    <div id="demo" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-----
+
+        <!--<input type="button" onclick="getCustomers()" value="Display JS Array"/>-->
+        <script>document.write(results)</script>
+        <!--<script>getCustomers();</script>-->
+        <!--<script>content();</script>-->
+
+    </div>
+</div>
+
+<div id="demo3" class="collapse">
+<script>getCustomers();</script>
+
+</div>
+
+<div id="textDiv">
+    <script>content();</script>
+
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#demo").on("hide.bs.collapse", function(){
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> English');
+        });
+        $("#demo").on("show.bs.collapse", function(){
+            $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Chinese');
+        });
+    });
+</script>
+
+</body>
+</html>

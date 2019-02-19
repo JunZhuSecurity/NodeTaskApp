@@ -1,5 +1,5 @@
 {
-  "name": "NodeTaskApp",
+  "name": "nodetaskapp",
   "version": "1.0.0",
   "description": "Node.js and MySQL app",
   "main": "app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jay3dec/NodeTaskApp"
+    "url": "git+https://github.com/jay3dec/NodeTaskApp.git"
   },
   "author": "Jay",
   "license": "MIT",
@@ -18,7 +18,8 @@
   "homepage": "https://github.com/jay3dec/NodeTaskApp",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "express": "^4.12.3",
-    "mysql": "^2.6.2"
-  }
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {}
 }
